@@ -2,11 +2,8 @@ import {  useState } from "react";
 import TaskList from "./TaskList.js";
 
 function TodoList() {
-    const [jobs,setJobs]=useState([
-        
-    ]);
+    const [jobs,setJobs]=useState([]);
     const [job,setJob]=useState([]);
-    
 
     const handleAdd=()=>{
         setJobs(prev=>[...prev,{id:jobs.length+1,job:job,isEditintg:false,status:false,isDelete:false}]);
@@ -14,21 +11,21 @@ function TodoList() {
     }
     const handleDelete=(id)=>{
         const removeItem=jobs.filter((job)=>{
-             if(job.id===id) job.isDelete=true;
-             return job;
+            if(job.id===id) job.isDelete=true;
+            return job;
         })
         setJobs(removeItem);
     }
     const handleDeleteForever=(id)=>{
         const removeItem=jobs.filter((job)=>{
-             return job.id!==id;
+            return job.id!==id;
         })
         setJobs(removeItem);
     }
     const handleRestore=(id)=>{
         const removeItem=jobs.filter((job)=>{
-             if(job.id===id) job.isDelete=false;
-             return job;
+            if(job.id===id) job.isDelete=false;
+            return job;
         })
         setJobs(removeItem);
     }
@@ -65,7 +62,7 @@ function TodoList() {
     }
 
 
-  return (
+    return (
     <div className="container py-5 h-100" style={{marginTop:'50px'}}>
         <div className="card">
             <div className="card-body p-5">
@@ -103,13 +100,9 @@ function TodoList() {
                 
             </div>  
             }
-             
-        
         </div> 
-        
-
     </div>
-  );
+    );
 }
 
 export default TodoList;

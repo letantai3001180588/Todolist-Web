@@ -3,14 +3,13 @@ import { Fragment } from "react";
 
 function DeleteModal({handleDelete,id,job}) {
     
-  return (
-       <Fragment>
-        
-        <div className="modal fade" id="DeleteModal" tabIndex={"-1"} aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    return (
+        <Fragment>
+            <div className="modal fade" id="DeleteModal" tabIndex={"-1"} aria-labelledby="exampleModalLabel2" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Ban co muon xoa cong viec ?</h5><br></br>
+                            <h5 className="modal-title" id="exampleModalLabel">Do you want to delete this job ?</h5><br></br>
                         </div>
                         <div className="modal-body text-center">
                             <span>{job}</span>
@@ -23,7 +22,7 @@ function DeleteModal({handleDelete,id,job}) {
                 </div>
             </div>
         </Fragment>
-  );
+    );
 }
 
 export default DeleteModal;
