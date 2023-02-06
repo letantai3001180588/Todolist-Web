@@ -5,16 +5,15 @@ function FilterList({jobs,filter,setFilter,Filter_Map,Filter_Name,handleDeleteAl
 
     return (
         <div className="row" style={{marginBottom:"50px"}}>
-                <div className="col-lg-6 col-sm-12">
-                    {Filter_Name.map((jobs,index)=>(
-                        <div className="form-check form-check-inline" key={index}>
-                            <input className="form-check-input" type="radio" name="sort" id={Filter_Name[index]} value="option1" checked={filter===Filter_Name[index]}  onChange={()=>setFilter(Filter_Name[index])}/>
-                            <label className="form-check-label" htmlFor={Filter_Name[index]}>Show {Filter_Name[index]}</label>
-                        </div>
-                    ))}
-                </div>
+            <div className="col-lg-6 col-sm-12">
+                {Filter_Name.map((jobs,index)=>(
+                    <div className="form-check form-check-inline" key={index}>
+                        <input className="form-check-input" type="radio" name="sort" id={Filter_Name[index]} value="option1" checked={filter===Filter_Name[index]}  onChange={()=>setFilter(Filter_Name[index])}/>
+                        <label className="form-check-label" htmlFor={Filter_Name[index]}>Show {Filter_Name[index]}</label>
+                    </div>
+                ))}
+            </div>
                 
-
             
             <div className="modal fade" id="exampleModal" tabIndex={"-1"} aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered">
