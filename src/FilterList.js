@@ -19,11 +19,11 @@ function FilterList({jobs,filter,setFilter,Filter_Map,Filter_Name,handleDeleteAl
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
                         <div className="modal-body">
-                            <h5 className="modal-title" id="exampleModalLabel">Ban co muon xoa het cong viec ?</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Do you want to delete all job ?</h5>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Huy</button>
-                            <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={handleDeleteAll} >Xoa</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={handleDeleteAll} >Delete</button>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ function FilterList({jobs,filter,setFilter,Filter_Map,Filter_Name,handleDeleteAl
                                 ))}
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Huy</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>

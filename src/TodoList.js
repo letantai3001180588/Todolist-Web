@@ -61,20 +61,25 @@ function TodoList() {
         setJobs([]);
     }
 
+    const handleSearch=(e)=>{
+        if(e.keyCode==13)
+            setJob(e.target.value);
+    }
 
     return (
     <div className="container py-5 h-100" style={{marginTop:'50px'}}>
         <div className="card">
             <div className="card-body p-5">
                 <div className="row text-center">
-                    <h1 className="title">TodoList</h1>
+                    <h1 className="title">TodoList Web</h1>
                 </div>
                 
                 <div className="row">
                     <div className="col-6 input-group mb-3">
                         <input type="text" className="form-control" placeholder="Action" 
                             value={job}
-                            onChange={e => setJob(e.target.value)}
+                            onChange={e => {setJob(e.target.value)}}
+                            onKeyUp={e=>{ if(e.keyCode==13) {setJob(e.target.value);handleAdd();}}}
                             >
                         </input>
                         <button type="button" className="btn btn-primary" onClick={handleAdd}>
